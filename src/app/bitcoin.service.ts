@@ -18,7 +18,10 @@ interface Response {
 
 @Injectable()
 export class BitcoinService {
+  current: Response;
+  list: Array<Response> = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
+  
 }
