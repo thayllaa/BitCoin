@@ -6,10 +6,14 @@
     <th> ID </th>
     <th> LINK </th>
   </tr>
+  <tr *ngFor="let repo of gitHubService.repos">
+    <td> {{ repo.id }} </td>
+    <td> {{ repo.full_name }} </td>
+  </tr>
 </table>
 <hr/>
 
-<h2> BitCoin $ &nbsp; <button> Atualizar </button> </h2>
+<h2> BitCoin $ &nbsp; <button (click)="update()"> Atualizar </button> </h2>
 
 <table border="1">
   <tr>
