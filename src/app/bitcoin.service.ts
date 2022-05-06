@@ -24,7 +24,8 @@ export class BitcoinService {
   constructor(private http: HttpClient) {}
 
   update() {
-    this.http.get<Response>('https://api.coindesk.com/v1/bpi/currentprice.json').subscribe(data => {
+    this.http.get<Response>('https://api.coindesk.com/v1/bpi/currentprice.json')
+    .subscribe(data => {
       this.current = data;
       this.list.push(data);
     });
