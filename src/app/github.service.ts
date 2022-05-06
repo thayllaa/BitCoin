@@ -13,7 +13,7 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   update() {
-    this.http.get<Array<Repo>>('https://api.github.com/users/santana/repos')
+    this.http.get<Array<Repo>>('https://api.github.com/users/larguesa/repos')
     .subscribe((data => {
       this.repos = data;
     }));
