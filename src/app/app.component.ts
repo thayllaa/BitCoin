@@ -10,4 +10,8 @@ export class AppComponent  {
   name = 'HttClient Application';
 
   constructor(public gitHubService: GithubService) {}
+
+  ngOnInIt() {
+    this.gitHubService.update();
+  }
 }
