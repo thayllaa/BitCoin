@@ -8,14 +8,16 @@ import { TimerService } from './timer.service';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
+export class AppComponent {
   name = 'HttClient Application';
 
   constructor(
     public gitHubService: GithubService,
     public bitcoinService: BitcoinService,
     public timer: TimerService
-  ) {}
+  ) {
+      this.timer.startCounter(1000);
+  }
 
   ngOnInIt() {
     this.gitHubService.update();
