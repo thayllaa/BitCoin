@@ -20,6 +20,6 @@ export class AppComponent  {
   }
 
   updateBitcoinRates() {
-    this.bitoinService.update();
+    this.bitcoinService.update();
   }
 }
