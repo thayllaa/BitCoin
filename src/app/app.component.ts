@@ -12,7 +12,7 @@ export class AppComponent  {
 
   constructor(
     public gitHubService: GithubService,
-    public bitoinService: BitcoinService,
+    public bitcoinService: BitcoinService,
   ) {}
 
   ngOnInIt() {
