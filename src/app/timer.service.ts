@@ -9,11 +9,7 @@ export class TimerService {
   constructor() {}
 
   startCounter(ms:number) {
-    if(!this.timer) {
-      this.timer = setInterval(() => {
-        this.autoStart;
-      }, ms);
-    }
+    this.autoStart;
   }
 
   resetCounter() {}
