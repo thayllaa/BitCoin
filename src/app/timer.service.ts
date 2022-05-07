@@ -1,12 +1,11 @@
 import { Injectable, OnInit } from '@angular/core';
 
-interface Time{
-  minutes: number,
-  seconds: number
-}
-
 @Injectable()
 export class TimerService implements OnInit {
+  counter: 0;
+  timer: any;
+  minutes: number;
+  seconds: number;
 
   constructor() {}
 
@@ -14,4 +13,11 @@ export class TimerService implements OnInit {
 
   countDownTimer = new Timer();
 
+  startCount(ms:number) {
+    if(!this.timer) {
+      this.timer = setInterval(() => {
+        this.counter++;
+      }, ms);
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 import { BitcoinService } from './bitcoin.service';
 import { GithubService } from './github.service';
+import { TimerService } from './timer.service';
 
 @Component({
   selector: 'my-app',
@@ -13,6 +14,7 @@ export class AppComponent  {
   constructor(
     public gitHubService: GithubService,
     public bitcoinService: BitcoinService,
+    public timer: TimerService
   ) {}
 
   ngOnInIt() {
