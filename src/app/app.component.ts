@@ -18,4 +18,8 @@ export class AppComponent  {
   ngOnInIt() {
     this.gitHubService.update();
   }
+
+  updateBitcoinRates() {
+    this.bitoinService.update();
+  }
 }
