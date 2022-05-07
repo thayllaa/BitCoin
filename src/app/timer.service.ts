@@ -1,23 +1,23 @@
 import { Injectable, OnInit } from '@angular/core';
 
 @Injectable()
-export class TimerService implements OnInit {
-  counter: 0;
-  timer: any;
-  minutes: number;
-  seconds: number;
+export class TimerService {
+  private timer: any;
+  private counter: 0;
 
   constructor() {}
 
-  ngOnInit() {}
-
-  countDownTimer = new Timer();
-
-  startCount(ms:number) {
+  startCounter(ms:number) {
     if(!this.timer) {
       this.timer = setInterval(() => {
         this.counter++;
       }, ms);
     }
+  }
+
+  resetCounter() {}
+
+  getCounter() {
+    return this.counter;
   }
 }

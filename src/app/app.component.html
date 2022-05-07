@@ -14,8 +14,9 @@
 <hr/>
 
 <h2> BitCoin $ &nbsp; <button (click)="updateBitcoinRates()"> Atualizar </button> </h2>
-<h5> For an update, you must await for </h5>
-{{ countDownTimer }}
+<p> 
+  <strong> Countdown: </strong> {{ timer.getCounter() }}s
+</p>
 
 <table border="1">
   <tr>
