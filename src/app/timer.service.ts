@@ -5,6 +5,9 @@ export class TimerService {
   private timer: any;
   private counter = 0;
 
-  constructor() { }
+  constructor() {}
 
+  getCount() {
+    return this.counter;
+  }
 }
