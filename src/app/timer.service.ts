@@ -2,6 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 
 @Injectable()
 export class TimerService {
+  autoStart = true;
   private timer: any;
   private counter: 0;
 
@@ -10,7 +11,7 @@ export class TimerService {
   startCounter(ms:number) {
     if(!this.timer) {
       this.timer = setInterval(() => {
-        this.counter++;
+        this.counter++
       }, ms);
     }
   }
