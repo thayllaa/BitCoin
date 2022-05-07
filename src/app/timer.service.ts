@@ -11,7 +11,7 @@ export class TimerService {
   startCounter(ms:number) {
     if(!this.timer) {
       this.timer = setInterval(() => {
-        this.counter++
+        this.autoStart;
       }, ms);
     }
   }
