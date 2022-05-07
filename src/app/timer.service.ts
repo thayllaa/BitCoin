@@ -7,6 +7,14 @@ export class TimerService {
 
   constructor() {}
 
+  timing(ms:number) {
+    if(this.timer) {
+      this.timer = setInterval(() => {
+        this.counter++
+      }, ms);
+    }
+  }
+
   getCount() {
     return this.counter;
   }
