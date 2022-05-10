@@ -22,6 +22,9 @@ export class BitcoinService {
   current: Response;
   list: Array<Response> = [];
 
+  private timer: any;
+  private counter: any;
+
   constructor(private http: HttpClient) {}
 
   update() {
@@ -30,5 +33,21 @@ export class BitcoinService {
       this.current = data;
       this.list.push(data);
     });
+  }
+
+  startTimer(ms:number) {
+    if (!this.timer) {
+      this.counter = 0;
+      this.timer = setInterval(() => {
+        this.counter++;
+      }, ms);
+      if (this.counter == 60) {
+        this.update();
+      }
+    }
+  }
+
+  getCounter() {
+    return this.counter;
   }
 }
