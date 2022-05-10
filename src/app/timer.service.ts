@@ -8,11 +8,9 @@ export class TimerService {
 
   constructor() {}
 
-  startCounter(ms:number) {
+  startTimer(ms:number) {
     return this.autoStart;
   }
-
-  resetCounter() {}
 
   getCounter() {
     return this.counter;

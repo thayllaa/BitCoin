@@ -16,7 +16,7 @@ export class AppComponent {
     public bitcoinService: BitcoinService,
     public timer: TimerService
   ) {
-      this.timer.startCounter(1000);
+      this.timer.startTimer(1000);
   }
 
   ngOnInIt() {
