@@ -14,8 +14,7 @@ export class AppComponent {
   constructor(
     public gitHubService: GithubService,
     public bitcoinService: BitcoinService,
-    public timer: TimerService
-  ) {
+    public timer: TimerService) {
       this.timer.startTimer(1000);
   }
 
