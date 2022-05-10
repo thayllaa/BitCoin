@@ -42,6 +42,7 @@ export class BitcoinService {
         this.counter++;
       }, ms);
       if (this.counter > 61) {
+        this.timer = clearInterval();
         this.update();
       }
     }
