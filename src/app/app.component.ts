@@ -8,7 +8,7 @@ import { GithubService } from './github.service';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
-  name = 'HttClient Application';
+  name = 'HttpClient Application';
 
   constructor(
     public gitHubService: GithubService,
