@@ -14,7 +14,11 @@
 <hr/>
 
 <h2> BitCoin $ &nbsp; 
-  <button (click)="updateBitcoinRates(); startTimer()"> Atualizar </button> </h2>
+  <button (click)="updateBitcoinRates()"> Atualizar </button> </h2>
+<p> 
+  <strong> Countdown: </strong> 
+  {{ bitcoinService.getCounter() }}s
+</p>
 
 <table border="1">
   <tr>
