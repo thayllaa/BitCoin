@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BitcoinService } from './bitcoin.service';
 import { GithubService } from './github.service';
 
-import { Observable, Subscription } from 'rxjs/Rx';
+import { Observable, Subscription } from 'rxjs';
 import 'rxjs/add/observable/interval';
 
 @Component({
