@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 interface Response {
   time: {
@@ -35,19 +36,17 @@ export class BitcoinService {
     });
   }
 
-  startTimer(ms:number) {
-    if (!this.timer) {
-      this.counter = 0;
-      this.timer = setInterval(() => {
-        this.counter++;
-      }, ms);
-      if (this.counter < 61) {
-        this.update();
-      }
-    }
+  ngOnInit() {
+    this.myTimer;
   }
 
-  getCounter() {
-    return this.counter;
+  myTimer() {
+    this.count = 60;
+    this.countDown = Observable.timer(0, 1000).subscribe(x => {
+      return this.counter;
+      if (this.counter == 0) {
+        this.countDown.unsubscribe();
+      }
+    });
   }
 }
