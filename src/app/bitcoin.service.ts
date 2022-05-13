@@ -45,7 +45,7 @@ export class BitcoinService {
     }
   }
 
-  getCount() {
+  getTimer() {
     return this.counter;
   }
 }
