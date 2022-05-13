@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   sub: Subscription;
   countDown;
   count;
+  timer;
+  interval;
 
   constructor(
     public gitHubService: GithubService,
