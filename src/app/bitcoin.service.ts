@@ -54,4 +54,8 @@ export class BitcoinService implements OnInit {
     }
   });
   }
+
+  getTimer() {
+    return this.countDown;
+  }
 }
