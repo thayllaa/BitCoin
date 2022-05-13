@@ -22,10 +22,6 @@ export class BitcoinService {
   current: Response;
   list: Array<Response> = [];
 
-  sub: Subscription;
-  countDown;
-  count;
-
   constructor(private http: HttpClient) {}
 
   update() {
