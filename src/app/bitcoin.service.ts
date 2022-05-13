@@ -26,9 +26,6 @@ export class BitcoinService implements OnInit {
   sub: Subscription;
   countDown;
   count;
-  
-  static timer: any;
-  static interval: any;
 
   constructor(private http: HttpClient) {}
 
