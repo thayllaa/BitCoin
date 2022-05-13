@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BitcoinService } from './bitcoin.service';
 import { GithubService } from './github.service';
 
@@ -9,6 +9,9 @@ import { GithubService } from './github.service';
 })
 export class AppComponent implements OnInit {
   name = 'HttpClient Application';
+  sub: Subscription;
+  countDown;
+  count;
 
   constructor(
     public gitHubService: GithubService,
