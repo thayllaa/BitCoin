@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   constructor(
     public gitHubService: GithubService,
     public bitcoinService: BitcoinService) {
+      this.bitcoinService.myTimer(1000);
   }
 
   ngOnInit() {
