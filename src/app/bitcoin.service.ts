@@ -23,7 +23,6 @@ export class BitcoinService {
   list: Array<Response> = [];
 
   private counter = 60;
-  private timer: any;
 
   constructor(private http: HttpClient) {}
 
