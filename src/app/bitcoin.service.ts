@@ -36,25 +36,4 @@ export class BitcoinService implements OnInit {
       this.list.push(data);
     });
   }
-
-  ngOnInit() {
-    this.myTimer;
-  }
-
-  myTimer() {
-    this.count = 60;
-    this.countDown = Observable.timer(0, 1000).subscribe(x => {
-      this.count = this.count - 1;
-    });
-
-  this.sub = Observable.interval(500).subscribe(x => {
-    if (this.count == 0) {
-      this.countDown.unsubscribe();
-    }
-  });
-  }
-
-  getTimer() {
-    return this.countDown;
-  }
 }
