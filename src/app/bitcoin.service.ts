@@ -26,6 +26,9 @@ export class BitcoinService implements OnInit {
   sub: Subscription;
   countDown;
   count;
+  
+  static timer: any;
+  static interval: any;
 
   constructor(private http: HttpClient) {}
 
@@ -36,9 +39,6 @@ export class BitcoinService implements OnInit {
       this.list.push(data);
     });
   }
-static timer: any;
-static interval: any;
-
 
   ngOnInit() {
     this.myTimer;
