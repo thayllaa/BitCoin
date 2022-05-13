@@ -7,7 +7,7 @@ import { GithubService } from './github.service';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   name = 'HttpClient Application';
 
   constructor(
