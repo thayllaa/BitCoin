@@ -19,7 +19,7 @@ interface Response {
 }
 
 @Injectable()
-export class BitcoinService implements OnInit {
+export class BitcoinService {
   current: Response;
   list: Array<Response> = [];
 
