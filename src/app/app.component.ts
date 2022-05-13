@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.gitHubService.update();
-    this.myTimer;
+    this.myTimer();
   }
 
   myTimer() {
