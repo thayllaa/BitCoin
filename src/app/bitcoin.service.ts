@@ -38,6 +38,7 @@ export class BitcoinService {
   myTimer(ms: number) {
     if (!this.timer) {
       this.counter = 60;
+      this.counter = this.counter - 1;
       if (this.counter == 60) {
         return this.update();
       }
