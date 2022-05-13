@@ -15,7 +15,7 @@ export class AppComponent {
     public bitcoinService: BitcoinService) {
   }
 
-  ngOnInIt() {
+  ngOnInit() {
     this.gitHubService.update();
   }
 
